@@ -51,7 +51,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/Users/dorayo/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/local/bin:/usr/local/mysql/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/local/bin:/usr/local/mysql/bin"
 export PATH=/opt/local/bin:$PATH
 export PATH=/opt/local/sbin:$PATH
 export PATH=$PATH:/Applications/ejabberd-14.07/bin
@@ -88,29 +88,26 @@ alias m='less'
 # no need for zsh
 #alias ..='cd ..'
 #alias ...='cd ..;cd ..'
-alias qy='cd /Users/dorayo/qingyun/'
-alias s1='cd /Users/dorayo/qingyun/备课-第一阶段课程'
-alias s2='cd /Users/dorayo/qingyun/备课-第二阶段课程'
-alias s3='cd /Users/dorayo/qingyun/备课-第三阶段课程'
+alias bk='cd /Users/xionghaizi/Documents/beike'
 alias md='mkdir'
 alias cl='clear'
 alias du='du -ch -d 1'
 #alias treeacl='tree -A -C -L 2'
 
 # 2.3) Text and editor commands
-alias mou='/Applications/Mou.app/Contents/MacOS/Mou'
-alias emacs='/usr/local/Cellar/emacs/24.3/Emacs.app/Contents/MacOS/Emacs'
-alias sublime='/Applications/Sublime\ Text\ 2.app/Contents/MacOS/Sublime\ Text\ 2'
+#alias emacs='/usr/share/emacs'
+alias sublime='/Applications/Sublime\ Text.app/Contents/MacOS/Sublime\ Text'
 alias em='emacs -nw'     # No X11 windows
 alias eqq='emacs -nw -Q' # No config and no X11
+alias vi="vim"
 export EDITOR='emacs'
 export VISUAL='emacs'
 alias -s html=mate
-alias -s py=em
-alias -s js=em
-alias -s c=em
-alias -s java=em
-alias -s txt=em
+alias -s py=vi
+alias -s js=vi
+alias -s c=vi
+alias -s java=vi
+alias -s txt=vi
 
 # 2.4) grep options
 export GREP_OPTIONS='--color=auto'
@@ -139,13 +136,16 @@ alias -s bz2='tar -xjvf'
 # Felix Ding
 # Nov 18, 2014
 #
-function start_qujing {
-  export http_proxy='http://theironislands.f.getqujing.net:49320'
-  export HTTPS_PROXY='http://theironislands.f.getqujing.net:49320'
-}
 #
 
 # 3.3) linode shadowsocks
 # export http_proxy="http://127.0.0.1:1080"
 #export https_proxy="http://127.0.0.1:1080"
 #alias curl="curl -x http://127.0.0.1:1080"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+#for nvm
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
+export ANDROID_HOME=~/Library/Android/sdk

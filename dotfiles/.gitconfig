@@ -1,6 +1,6 @@
 [user]
-	name = dorayo
-	email = yomingyo@gmail.com
+	name = Bianchengme
+	email = bianchengme@biancheng.me
 [alias]
 	st = status
 	ci = commit
@@ -15,3 +15,5 @@
 	smudge = git-media-smudge %f
 [core]
 	editor = vim
+[http]
+	sslVerify = false

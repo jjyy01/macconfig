@@ -109,3 +109,67 @@ inoremap <C-n> <Down>
 inoremap <C-p> <Up>
 inoremap <M-f> <S-Right>
 inoremap <M-b> <S-Left>
+inoremap jk <ESC>
+let mapleader = ","
+
+
+"vundle begin
+
+set nocompatible " be iMproved,不要使用vi的键盘模式，而是vim自己的
+
+filetype off " required!侦测文件类型 /** 从这行开始，vimrc配置 **/
+
+set rtp+=~/.vim/bundle/vundle/
+
+call vundle#rc()
+
+"let Vundle manage Vundle
+
+" required!
+
+Bundle 'gmarik/vundle'
+
+" My Bundles here: /* 插件配置格式 */
+
+"
+
+" original repos on github （Github网站上非vim-scripts仓库的插件，按下面格式填写）
+Bundle 'tpope/vim-fugitive'
+
+Bundle 'Lokaltog/vim-easymotion'
+
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+Bundle 'tpope/vim-rails.git'
+
+" vim-scripts repos （vim-scripts仓库里的，按下面格式填写）
+
+Bundle 'L9'
+
+Bundle 'FuzzyFinder'
+
+" non github repos （非上面两种情况的，按下面格式填写）
+
+Bundle 'git://git.wincent.com/command-t.git'
+
+filetype plugin indent on " required! /载入文件类型插件为特定文件类型载入相关缩进文件** vimrc文件配置结束 **/
+" /** vundle命令 **/
+"
+" " Brief help
+"
+" " :BundleList - list configured bundles
+"
+" " :BundleInstall(!) - install(update) bundles
+"
+" " :BundleSearch(!) foo - search(or refresh cache first) for foo
+"
+" " :BundleClean(!) - confirm(or auto-approve) removal of unused bundles
+"
+" "
+"
+" " see :h vundle for more details or wiki for FAQ
+"
+" " NOTE: comments after Bundle command are not allowed..
+"
+"
+"vundle end
